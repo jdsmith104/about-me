@@ -13,3 +13,22 @@ The repository for my personal projects
 # Instructions
 - Go to front-end directory `cd front-end\App`
 - Run web app locally `ionic serve`
+
+# Dependencies
+- ESLint Airbnb
+
+
+# How to setup ESLint for typescript using yarn (airbnb)
+## Setup
+- `yarn add eslint`
+- `yarn add @typescript-eslint/eslint-plugin`
+- `yarn add @typescript-eslint/parser`
+- `yarn add eslint-config-airbnb`
+- Create config file: `yarn create @eslint/config`
+
+## Check file
+- Then `yarn run <file>`
+
+## Sources:
+- https://eslint.org/docs/user-guide/getting-started
+- https://github.com/airbnb/javascript
