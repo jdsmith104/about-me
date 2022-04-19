@@ -12,3 +12,11 @@ The repository for my personal projects
 - [ ] Choose backend service
 - [ ] Connect to domain
 - [ ] Setup HEROKU app for development
+
+# Things I want to learn/revist
+- [ ] Building a clean multiplatform UI
+- [ ] Designing a web page for mobile and desktop
+- [ ] Using cloud services
+- [ ] CI/CD
+- [ ] Writing maintainable code
+- [ ] Web unit testing
