@@ -20,6 +20,7 @@ The repository for my personal projects
 - CI/CD
 - Writing maintainable code
 - Web unit testing
+- MVVM pattern
 
 # Instructions
 - Go to front-end directory `cd front-end\App`
