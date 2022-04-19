@@ -20,3 +20,7 @@ The repository for my personal projects
 - CI/CD
 - Writing maintainable code
 - Web unit testing
+
+# Instructions
+- Go to front-end directory `cd front-end\App`
+- Run web app locally `ionic serve`
