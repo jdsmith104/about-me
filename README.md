@@ -28,6 +28,8 @@ The repository for my personal projects
 
 ## Check file
 - Then `yarn run <file>`
+- There may be an added stage to install prettier
+- `yarn prettier .`
 
 ## Sources:
 - https://eslint.org/docs/user-guide/getting-started
