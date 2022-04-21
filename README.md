@@ -34,6 +34,10 @@ The repository for my personal projects
 ## Setting up Heroku deployment
 - Follow [this guide](https://stackoverflow.com/questions/39197334/automated-heroku-deploy-from-subfolder)
 
+### Deploying to Heroku
+- Go to front-end folder `cd front-end/App` 
+- Deploy `git push heroku main` or `git push heroku <branch-name>:main`
+
 ## Sources:
 - https://eslint.org/docs/user-guide/getting-started
 - https://github.com/airbnb/javascript
