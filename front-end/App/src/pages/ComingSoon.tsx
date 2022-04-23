@@ -28,7 +28,7 @@ const ComingSoon = function (): ReactElement {
       <IonContent>
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Coming Soon!</IonCardTitle>
+            <IonCardTitle color="primary">Coming Soon!</IonCardTitle>
             <IonCardSubtitle>By me!</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>This site will be coming soon</IonCardContent>
