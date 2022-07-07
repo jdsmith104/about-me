@@ -7,7 +7,7 @@
     "shell": "yarn run build && firebase functions:shell",
     "start": "yarn run shell",
     "deploy": "firebase deploy --only functions",
-    "prettier": "yarn prettier --write .",
+    "prettier": "prettier --write .",
     "logs": "firebase functions:log"
   },
   "engines": {
