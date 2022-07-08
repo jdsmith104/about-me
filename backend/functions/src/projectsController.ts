@@ -4,7 +4,7 @@ import { db } from "./config/firebase";
 type ProjectType = {
   title: string;
   icon: string;
-  technology: Array<string>;
+  technologies: Array<string>;
   tagline: string;
   href: string;
 };
@@ -15,14 +15,14 @@ type Request = {
 };
 
 const postProject = async (req: Request, res: Response) => {
-  const { title, icon, technology, tagline, href } = req.body;
+  const { title, icon, technologies, tagline, href } = req.body;
   try {
     const project = db.collection("projects").doc();
     const projectObject = {
       id: project.id,
       title,
       icon,
-      technology,
+      technologies,
       tagline,
       href,
     };
