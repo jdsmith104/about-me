@@ -8,15 +8,59 @@
 
 import * as functions from "firebase-functions";
 import * as express from "express";
-import { getProjects, postProject } from "./projectsController";
-const cors = require("cors");
+import { db } from "./config/firebase";
 
 const app = express();
 
-// Automatically allow cross-origin requests
-app.use(cors({ origin: true }));
+exports.getProjects = functions.https.onRequest(async (req, res) => {
+  try {
+    const snapshot = await db.collection("projects").get();
 
-app.post("/projects", postProject);
-app.get("/projects", getProjects);
-app.get("/", (req, res) => res.status(200).send("Hey there!"));
+    const projectID: any = req.query?.id;
+    let data;
+    if (projectID) {
+      console.log("Hiya", projectID);
+      const filteredQuery = snapshot.query.where("id", "==", projectID);
+      const querySnapshot = await filteredQuery.get();
+      data = querySnapshot.docs[0].data();
+      console.log(querySnapshot.size, data);
+    } else {
+      data = snapshot.docs.map((doc) => doc.data());
+    }
+
+    res.status(200).send({
+      status: "success",
+      data: data,
+    });
+  } catch (error: any) {
+    res.status(500).json(error.message);
+  }
+});
+
+exports.addProject = functions.https.onRequest(async (req, res) => {
+  try {
+    const { title, icon, technologies, tagline, href } = req.body;
+    const project = db.collection("projects").doc();
+    const projectObject = {
+      id: project.id,
+      title,
+      icon,
+      technologies,
+      tagline,
+      href,
+    };
+
+    project.set(projectObject);
+
+    res.status(200).send({
+      status: "success",
+      message: "project added successfully",
+      data: projectObject,
+    });
+  } catch (error: any) {
+    res.status(500).json(error.message);
+  }
+});
+
+app.get("/", (req, res) => res.status(200).send("Connected to firebase!"));
 exports.app = functions.https.onRequest(app);
