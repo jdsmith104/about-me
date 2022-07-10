@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 test("test server live", async () => {
   const response = await fetch(
-    "http://localhost:5001/jacobdsmith-81e81/us-central1/app",
+    "http://localhost:5001/jacobdsmith-81e81/us-central1/testConnection",
     {
       method: "GET",
     }
