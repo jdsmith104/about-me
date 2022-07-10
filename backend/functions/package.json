@@ -4,6 +4,7 @@
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
     "serve": "yarn run build && firebase emulators:start --only functions,firestore",
+    "debug": "firebase emulators:start --inspect-functions",
     "shell": "yarn run build && firebase functions:shell",
     "start": "yarn run shell",
     "deploy": "firebase deploy --only functions",
