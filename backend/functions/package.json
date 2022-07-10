@@ -7,7 +7,7 @@
     "debug": "firebase emulators:start --inspect-functions",
     "shell": "yarn run build && firebase functions:shell",
     "start": "yarn run shell",
-    "deploy": "firebase deploy --only functions",
+    "deploy": "yarn run build && firebase deploy --only functions",
     "tidy": "prettier --write .",
     "logs": "firebase functions:log",
     "test": "jest"
