@@ -3,6 +3,8 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true,
+    jasmine: true,
   },
   extends: [
     "airbnb",
@@ -22,7 +24,9 @@ module.exports = {
   ],
   plugins: ["@typescript-eslint", "import"],
   rules: {
+    quoteProps: ["as-needed"],
     quotes: ["error", "double"],
     "import/no-unresolved": 0,
+    indent: ["error", 2],
   },
 };
